@@ -25,7 +25,7 @@ async def f1(message: Message, state: FSMContext):
                 "\n\nНажмите на кнопку ниже, чтобы продолжить 👇"
                 "\n\nЕсли что-то пойдёт не так — просто введите /start, и я всё перезапущу! 🔄",
         reply_markup=keyboard_start(),
-        document=FSInputFile("Политика Конфиденциальности.pdf")
+        document=FSInputFile("./Политика конфиденциальности.docx.pdf")
     )
     await state.set_state(UserStates.pologenie1)
 
@@ -145,3 +145,4 @@ async def f7(callback_query: CallbackQuery, state: FSMContext):
         chat_id=callback_query.from_user.id,
         text=answers[callback_query.data]
     )
+
