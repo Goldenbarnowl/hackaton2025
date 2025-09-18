@@ -17,5 +17,5 @@ secrets = Secrets()
 # Инициализация бота
 default = DefaultBotProperties(parse_mode='HTML', protect_content=False)
 bot = Bot(token=secrets.token, default=default)
-storage = RedisStorage.from_url(secrets.redis_url)
-dp = Dispatcher(storage=storage)
+dp = Dispatcher()
+
